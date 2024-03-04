@@ -1,5 +1,4 @@
 ﻿using ProyectoApiCrud.DTOs;
-using ProyectoApiCrud.Models;
 
 namespace ProyectoApiCrud.Services.Interfaces
 {

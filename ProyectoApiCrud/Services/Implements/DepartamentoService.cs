@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
 using Dapper;
-using Microsoft.AspNetCore.Mvc;
 using ProyectoApiCrud.Data;
 using ProyectoApiCrud.DTOs;
 using ProyectoApiCrud.Models;
 using ProyectoApiCrud.Services.Interfaces;
 using System.Data;
-using System.Data.SqlClient;
 
 namespace ProyectoApiCrud.Services.Implements
 {

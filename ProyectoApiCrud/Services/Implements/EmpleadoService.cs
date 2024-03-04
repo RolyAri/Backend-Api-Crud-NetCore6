@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Dapper;
-using Microsoft.AspNetCore.Mvc;
 using ProyectoApiCrud.Data;
 using ProyectoApiCrud.DTOs;
 using ProyectoApiCrud.Models;
@@ -23,8 +22,7 @@ namespace ProyectoApiCrud.Services.Implements
         {
             using (var connection = this._dbContext.CreateConnection())
             {
-                var empleadoList = await connection.QueryAsync<EmpleadoDTO>("ObtenerEmpleadosDTO");
-                empleadoList.ToList();
+                var empleadoList = await connection.QueryAsync<Empleado>("ObtenerEmpleadosDTO");
                 return _mapper.Map<List<EmpleadoDTO>>(empleadoList);
             }
         }
@@ -32,8 +30,8 @@ namespace ProyectoApiCrud.Services.Implements
         {
             using (var connection = this._dbContext.CreateConnection())
             {
-                var empleado = await connection.QueryFirstOrDefaultAsync<EmpleadoDTO>("ObtenerEmpleadoConDepartamentoPorId", new {idEmpleado}, commandType: CommandType.StoredProcedure);
-                return empleado;
+                var empleado = await connection.QueryFirstOrDefaultAsync<Empleado>("ObtenerEmpleadoConDepartamentoPorId", new {idEmpleado}, commandType: CommandType.StoredProcedure);
+                return _mapper.Map<EmpleadoDTO>(empleado);
             }
         }
 

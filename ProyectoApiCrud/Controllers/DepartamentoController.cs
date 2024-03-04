@@ -1,13 +1,6 @@
-﻿using AutoMapper;
-using Dapper;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoApiCrud.DTOs;
-using ProyectoApiCrud.Models;
-using ProyectoApiCrud.Services.Implements;
 using ProyectoApiCrud.Services.Interfaces;
-using System.Data.SqlClient;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ProyectoApiCrud.Controllers
 {
